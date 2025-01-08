@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">   
+    <link rel="stylesheet" href="./dashboard.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="modal">
+        <div class="profile">
+            <div class="profile-img">
+                <img src="../image/Rectangle 23.png" alt="">
+            </div>
+            <div class="profile-name">
+                <p>purya</p>
+                <span>admin</span>
+            </div>
+        </div>
+        <div class="modal-list">
+            <ul class="modal-list-ul-one">
+                <li>
+                    <i class='fa fa-user'></i>
+                    <p><a href="#">پروفایل من</a></p>
+                </li>
+                <li>
+                    <i class='fa fa-cog'></i>
+                    <p><a href="#">تنظیمات</a></p>
+                </li>
+                <li>
+                    <i class='fa fa-credit-card'></i>
+                    <p><a href="">کیف پول</a></p>
+                </li>
+            </ul>
+            <ul class="modal-list-ul-two">
+                <li>
+                    <i class='fa fa-life-buoy'></i>
+                    <p><a href="#">کمک</a></p>
+                </li>
+                <li>
+                    <i class='fa fa-question-circle'></i>
+                    <p><a href="#">سوالات</a></p>
+                </li>
+            </ul>
+            <ul class="modal-list-ul-three">
+                <li>
+                    <i class='fa fa-share-square'></i>
+                    <p><a href="#">خروج</a></p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="alert">
+        <span onclick="closeAlert()" class="close-btn">
+            <span class="fas fa-times"></span>
+        </span>
+        <span class="msg">موراد خواسته شده رو کامل کنید</span>
+        <span class="fas fa-exclamation-circle"></span>
+    </div>
+    <header class="c-header">
+        <div class="header">
+            <div onclick="openmolal()" class="profile-header">
+                <img src="#" id="profile" onerror="this.onerror=null;this.src='../image/Rectangle 23.png';" />
+            </div>
+            <div class="logo">
+                <img src="../image/logo-header.jpeg" alt="">
+            </div>
+        </div>
+        <div class="header-list">
+            <ul>
+                <li class="on-page">
+                    <i class='fa fa-user'></i>
+                    <span>پروفایل</span>
+                </li>
+                <li>
+                    <a href="./dashboardtwo.html">
+                        <i class='fa fa-tags'></i>
+                        <span>آگهی های من</span>
+                    </a>
+                </li>
+                <div class=""></div>
+                <li>
+                    <a href="./dashboardthree.html">
+                        <i class='fa fa-bookmark'></i>
+                        <span>علاقه مندی ها</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./dashboardfour.html">
+                        <i class='fa fa-life-buoy'></i>
+                        <span>پشتیبانی</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="c-main">
+        <form id="my-form">
+        <div class="main">
+                <h2>جزئیات کاربر</h2>
+                <div class="upload-img">
+                    <div class="upload-profile"></div>
+                </div>
+                <div class="inputs">
+                    <div class="input">
+                        <label id="label" for="name">نام : </label>
+                        <input type="text" id="input-fname" class="name">
+                    </div>
+                    <div class="inputone">
+                        <label id="label" for="name">نام خانوادگی : </label>
+                        <input type="text" id="input-lname" class="name">
+                    </div>
+                    <div class="inputtwo">
+                        <label id="label" for="name">ایمیل : </label>
+                        <input type="email" id="input-email" class="name">
+                    </div>
+                    <div class="inputthree">
+                        <label id="label" for="name">شماره تلفن : </label>
+                        <input type="text" id="input-number" class="name">
+                    </div>
+                    <div class="inputfour">
+                        <div>
+                            <label id="label" for="name">کد ملی: </label>
+                            <input type="text" id="input-code" class="name">
+                        </div>
+                        <div>
+                            <label id="label" for="name">نوع شخص : </label>
+                            <select>
+                                <option value="option1">حقیقی</option>
+                                <option value="option2">حقوقی</option>
+                            </select>  
+                        </div>
+                    </div>
+                    <div class="inputfive">
+                        <label id="label" for="name">آدرس : </label>
+                        <input type="text" id="input-address" class="name">
+                    </div>
+                </div>
+                <div class="btns">
+                    <button class="sub" type="submit"><span>ذخیره اطلاعات</span></button>
+                    <button class="cancel"><span>نادیده گرفتن</span></button>
+                </div>
+            </div>
+        </form>
+        </main>
+
+
+    <script>
+
+        function openmolal() {
+            var elem = document.querySelector('.modal');
+            if (elem.style.display === "none") {
+                elem.style.display = "block";
+            } else {
+                elem.style.display = "none";
+            }
+        }
+        // 
+
+        const profile = document.querySelectorAll('.upload-profile');
+
+        profile.forEach(item => {
+            item.addEventListener('click', () => {
+                const input = document.createElement('input');
+                input.type = 'file';
+                input.accept = 'image/*';
+                input.onchange = () => {
+                    const file = input.files[0];
+                    const reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = () => {
+                        item.style.backgroundImage = `url(${reader.result})`;
+                    };
+                };
+                input.click();
+            });
+        });
+        // 
+        // const myform = document.querySelector('#myform')
+        const myform = document.querySelector('#my-form')
+        const inputfname = document.querySelector('#input-fname')
+        const inputlname = document.querySelector('#input-lname')
+        const inputemail = document.querySelector('#input-email')
+        const inputnumber = document.querySelector('#input-number')
+        const inputcode = document.querySelector('#input-code')
+        const inputaddress = document.querySelector('#input-address')
+        const alert = document.querySelector('.alert')
+
+        myform.addEventListener("submit",onSubmit)
+        function onSubmit(e){
+            e.preventDefault()
+            // console.log(inputfname.value);
+
+            if (inputaddress.value === '' || inputcode.value === '' || inputnumber.value === '' || inputemail.value === '' || inputfname.value === '' || inputlname.value === '') {
+                alert.style.display = "flex";
+
+                setTimeout(()=>{
+                    alert.remove()
+                },5000)
+            }
+        }     
+        function closeAlert() {
+            alert.style.display = "none";
+        }
+
+    
+
+
+
+    </script>
+</body>
+</html>

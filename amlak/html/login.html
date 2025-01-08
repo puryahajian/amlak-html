@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">  
+    <title>Document</title>
+</head>
+<body>
+    <main class="main">
+        <form id="my-form">
+            <div class="box-login">
+                <h2>Login</h2>
+                <div class="msg"></div>
+                <div class="modal">
+                    <div class="form-group">
+                        <label id="label" for="input">شماره تلفن یا ایمیل خودر را وارد کتید : </label>
+                        <input type="text" id="input" placeholder="شماره تلفن یا ایمیل">
+                    </div>
+                    <div class="form-group-two">
+                        <label id="label" for="input"> کد ارسال شده را وارد کنید : </label>
+                        <input type="text" id="inputtwo" placeholder="کد ارسال شده">
+                    </div>
+                    <button class="btn-sign" type="submit"><span>Login</span></button>
+                    <div class="login-account">
+                        <div class="acoutnt-one">
+                            <button class="btn-account" type="button">google</button>
+                        </div>
+                        <div class="acoutnt-two">
+                            <button class="btn-account" type="button">facebook</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        const myform = document.querySelector("#my-form");
+        const inputemail = document.querySelector("#input");
+        const msg = document.querySelector(".msg");
+
+        myform.addEventListener("submit",onSubmit)
+        function onSubmit(e){
+            e.preventDefault()
+            console.log(inputemail.value);
+            if (inputemail.value === '') {
+                msg.innerText="موارد زیر را کامل کنید !"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">   
+    <link rel="stylesheet" href="./dashbourdtwo.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="modal">
+        <div class="profile">
+            <div class="profile-img">
+                <img src="../image/Rectangle 23.png" alt="">
+            </div>
+            <div class="profile-name">
+                <p>purya</p>
+                <span>admin</span>
+            </div>
+        </div>
+        <div class="modal-list">
+            <ul class="modal-list-ul-one">
+                <li>
+                    <i class='fa fa-user'></i>
+                    <p><a href="#">پروفایل من</a></p>
+                </li>
+                <li>
+                    <i class='fa fa-cog'></i>
+                    <p><a href="#">تنظیمات</a></p>
+                </li>
+                <li>
+                    <i class='fa fa-credit-card'></i>
+                    <p><a href="">کیف پول</a></p>
+                </li>
+            </ul>
+            <ul class="modal-list-ul-two">
+                <li>
+                    <i class='fa fa-life-buoy'></i>
+                    <p><a href="#">کمک</a></p>
+                </li>
+                <li>
+                    <i class='fa fa-question-circle'></i>
+                    <p><a href="#">سوالات</a></p>
+                </li>
+            </ul>
+            <ul class="modal-list-ul-three">
+                <li>
+                    <i class='fa fa-share-square'></i>
+                    <p><a href="#">خروج</a></p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <header class="c-header">
+        <div class="header">
+            <div onclick="openmolal()" class="profile-hesder">
+                <img src="#" id="profile" onerror="this.onerror=null;this.src='../image/Rectangle 23.png';" />
+            </div>
+            <div class="logo">
+                <img src="../image/logo-header.jpeg" alt="">
+            </div>
+        </div>
+        <div class="header-list">
+            <ul>
+                <li>
+                    <a href="./dashboard.html">
+                        <i class='fa fa-user'></i>
+                        <span>پروفایل</span>
+                    </a>
+                </li>
+                <li class="on-page">
+                    <i class='fa fa-tags'></i>
+                    <span>آگهی های من</span>
+                </li>
+                <li>
+                    <a href="./dashboardthree.html">
+                        <i class='fa fa-bookmark'></i>
+                        <span>علاقه مندی ها</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./dashboardfour.html">
+                        <i class='fa fa-life-buoy'></i>
+                        <span>پشتیبانی</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="c-main">
+        <div class="main">
+            <h2>آگهی های من</h2>
+            <div class="it">
+                <div class="itt">
+                    <div class="img">
+                        <img src="../image/home-default.jpg" alt="">
+                    </div>
+                    <p>ویلای استخردار</p>
+                    <p class="m">متراژ : ۲۰۰متری</p>
+                    <p class="agree">نوع قرارداد : رهن/اجاره</p>
+                    <p class="price">قیمت : ۲۰۰۰,۰۰۰,۰۰۰ تومان</p>
+                </div>
+                <div class="it-btn">
+                    <button type="reset" class="delete"><span>حذف</span></button>
+                </div>
+            </div>
+            <div class="it">
+                <div class="itt">
+                    <div class="img">
+                        <img src="../image/home-default.jpg" alt="">
+                    </div>
+                    <p>ویلای استخردار</p>
+                    <p class="m">متراژ : ۲۰۰متری</p>
+                    <p class="agree">نوع قرارداد : رهن/اجاره</p>
+                    <p class="price">قیمت : ۲۰۰۰,۰۰۰,۰۰۰ تومان</p>
+                </div>
+                <div class="it-btn">
+                    <button type="reset" class="delete"><span>حذف</span></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        function openmolal() {
+            var elem = document.querySelector('.modal');
+            if (elem.style.display === "none") {
+                elem.style.display = "block";
+            } else {
+                elem.style.display = "none";
+            }
+        }
+
+
+    </script>
+</body>
+</html>
